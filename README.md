@@ -31,7 +31,7 @@ El objetivo de este sitio es ofrecer una experiencia digital rápida, responsiva
 ## Ver el proyecto en vivo
 
 Puedes visitar mi portafolio directamente aquí:
-https://jonawow.github.io/micv/
+https://jonmtzdev.github.io/micv/
 
 ---
 Diseñado y construido con intención.
