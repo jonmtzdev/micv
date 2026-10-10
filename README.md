@@ -7,26 +7,32 @@ Hola. Soy Jonathan A. Martínez, desarrollador web radicado en la Ciudad de Méx
 El objetivo de este sitio es ofrecer una experiencia digital rápida, responsiva y con personalidad. Está diseñado no solo para mostrar mi trabajo, sino para demostrar atención al detalle en el desarrollo frontend.
 
 ### Características principales:
-- **Diseño 100% responsivo:** Adaptable a cualquier pantalla (móvil, tablet, escritorio).
-- **Modo Claro / Oscuro:** Integrado y con guardado de preferencias del usuario.
-- **Animaciones fluidas (Smooth Scroll):** Implementado con **Lenis** para una experiencia de navegación fluida.
-- **Efectos Parallax y Reveal:** Potenciado por **GSAP (ScrollTrigger)** para dar vida a las imágenes y textos durante el scroll.
-- **Interacciones 3D:** Efectos de perspectiva en las tarjetas de los proyectos al pasar el cursor (sólo en escritorio).
+- **Hero 3D:** esfera de partículas, anillos orbitales y malla en **Three.js** (shaders propios) que reaccionan al cursor y al scroll; se carga de forma diferida y se omite con "reducir movimiento".
+- **Glassmorphism:** sistema de vidrio (blur + borde con brillo) sobre un fondo de auroras animadas, cuadrícula y un halo que sigue al cursor.
+- **Proyectos con profundidad:** tarjetas con inclinación 3D, reflejo de luz, capas en `translateZ` y parallax en las capturas.
+- **Chips de tecnología por proyecto:** logo y color de marca de cada tecnología (Simple Icons) y **filtros animados** con GSAP Flip.
+- **Sección de stack:** tecnologías agrupadas, con el número de proyectos que usan cada una calculado a partir de las tarjetas.
+- **Microinteracciones:** titulares que aparecen palabra por palabra, etiquetas que se "descifran", contadores, código que se escribe solo, botones magnéticos y barra de progreso de scroll.
+- **Modo claro / oscuro** con preferencia guardada, **100% responsivo** y respetuoso de `prefers-reduced-motion`.
 
 ## Tecnologías utilizadas
 
 - **HTML5** semántico y accesible.
-- **CSS3** puro (uso intensivo de Custom Properties / Variables, Grid, Flexbox y media queries).
+- **CSS3** puro (Custom Properties, Grid, `color-mix`, `@property`, `backdrop-filter`, máscaras).
 - **Vanilla JavaScript** (ES6+).
-- [**GSAP & ScrollTrigger**](https://gsap.com/) para animaciones avanzadas.
-- [**Lenis**](https://lenis.studiofreight.com/) para el smooth scrolling.
+- [**Three.js**](https://threejs.org/) para la escena 3D del hero.
+- [**GSAP**](https://gsap.com/) con ScrollTrigger y Flip para animaciones.
+- [**Lenis**](https://lenis.darkroom.engineering/) para el smooth scrolling.
+- [**Simple Icons**](https://simpleicons.org/) para los logos de tecnologías.
 
 ## Estructura de archivos
 
-- index.html: La estructura principal del sitio (Single Page).
-- styles.css: Todos los estilos, variables de diseño y adaptaciones responsivas.
-- script.js: Lógica de interacciones, modo oscuro, Lenis y animaciones GSAP.
-- *.png / *.jpg: Recursos gráficos optimizados.
+- `index.html`: estructura principal del sitio (single page).
+- `styles.css`: tokens de diseño, sistema glass, componentes, responsive y mapa de colores/íconos por tecnología (`[data-tech]`).
+- `script.js`: interacciones, tema, animaciones GSAP, filtros y escena Three.js.
+- `img/`: capturas y foto optimizadas en WebP.
+
+Para agregar un proyecto, duplica un `<article class="project-card">`, ajusta `data-tags` (filtros) y su lista de `.tech`; los contadores de filtros y del stack se actualizan solos.
 
 ## Ver el proyecto en vivo
 
