@@ -494,3 +494,6 @@ h2 em { color: var(--accent); }
 body[data-theme="light"] [data-tech="javascript"] { --c: #c9a800; }
 body[data-theme="light"] [data-tech="react"] { --c: #149eca; }
 body[data-theme="light"] [data-tech="tailwindcss"] { --c: #0e9fbf; }
+
+[data-tech="cloudflare"] { --c: #f59b42; --icon: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/cloudflare.svg"); }
+[data-tech="mercadopago"] { --c: #49b8ef; --icon: url("https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/mercadopago.svg"); }

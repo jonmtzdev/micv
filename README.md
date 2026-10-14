@@ -22,7 +22,7 @@ El objetivo de este sitio es ofrecer una experiencia digital rápida, responsiva
 - **Vanilla JavaScript** (ES6+).
 - [**Three.js**](https://threejs.org/) para la escena 3D del hero.
 - [**GSAP**](https://gsap.com/) con ScrollTrigger y Flip para animaciones.
-- [**Lenis**](https://lenis.darkroom.engineering/) para el smooth scrolling.
+- [**Lenis**](https://lenis.darkroom.engineering/) para las transiciones suaves de los enlaces internos; rueda, trackpad y gestos táctiles conservan el desplazamiento nativo.
 - [**Simple Icons**](https://simpleicons.org/) para los logos de tecnologías.
 
 ## Estructura de archivos

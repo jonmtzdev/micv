@@ -82,11 +82,13 @@ if (copyPhone) {
 }
 
 /* ==========================================================================
-   Smooth scroll (Lenis) + anchors
+   Native wheel/touch scrolling + smooth anchors (Lenis)
    ========================================================================== */
 let lenis = null;
 if (window.Lenis && !prefersReducedMotion) {
-  lenis = new Lenis({ duration: 1.15, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+  // Keep wheel/trackpad input native; smoothing it adds noticeable desktop lag.
+  // Lenis still animates explicit navigation through scrollTo below.
+  lenis = new Lenis({ duration: 1.15, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: false });
   if (hasGsap) {
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((time) => lenis.raf(time * 1000));
